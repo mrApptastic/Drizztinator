@@ -6,6 +6,7 @@ const { PDFDocument } = PDFLib;
 export async function downloadCharacter() {
   const character = charGen.generateCharacter();
   const formUrl = Ib;
+ 
   const formPdfBytes = await fetch(formUrl, {
     mode: 'cors',
     cache: 'no-cache'
@@ -24,6 +25,11 @@ export async function downloadCharacter() {
   form.getTextField('CHA').setText((character.Race.Modifiers.Wisdom + character.Stats.Wisdom).toString());
 
   const pdfBytes = await pdfDoc.save();
+
+  // var blob = new Blob([pdfBytes], { type: "application/pdf" });
+  // var urlCreator = window.URL || window.webkitURL;
+  // var imageUrl = urlCreator.createObjectURL(blob);
+  // window.open(imageUrl);
 
   download(pdfBytes, character.Name + '.pdf', 'application/pdf');
 }
