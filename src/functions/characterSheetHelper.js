@@ -1,10 +1,10 @@
 import { Ib } from '../assets/characterSheet.js';
 import * as charGen from '../functions/characterGenerator.js';
 
-const { PDFDocument } = PDFLib;
+import { PDFDocument } from 'pdf-lib';
 
-export async function downloadCharacter() {
-  const character = charGen.generateCharacter();
+export async function downloadCharacter(character) {
+  // const character = charGen.generateCharacter();
   const formUrl = Ib;
  
   const formPdfBytes = await fetch(formUrl, {
@@ -26,10 +26,12 @@ export async function downloadCharacter() {
 
   const pdfBytes = await pdfDoc.save();
 
-  // var blob = new Blob([pdfBytes], { type: "application/pdf" });
-  // var urlCreator = window.URL || window.webkitURL;
-  // var imageUrl = urlCreator.createObjectURL(blob);
-  // window.open(imageUrl);
+  var blob = new Blob([pdfBytes], { type: "application/pdf" });
+  var urlCreator = window.URL || window.webkitURL;
+  var imageUrl = urlCreator.createObjectURL(blob);
+  window.open(imageUrl);
 
-  download(pdfBytes, character.Name + '.pdf', 'application/pdf');
+  return imageUrl;
+
+  // download(pdfBytes, character.Name + '.pdf', 'application/pdf');
 }

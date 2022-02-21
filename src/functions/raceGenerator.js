@@ -3,7 +3,7 @@ import * as dice from "./diceHelper.js";
 export function generateRace() {
     const roll = dice.roll(100);
 
-    if (roll <= 5) {
+    if (roll >= 1 && roll <= 5) {
         return {
             Name: "Dragonborn",
             Modifiers : {
@@ -15,7 +15,7 @@ export function generateRace() {
                 Charisma: 1
             }
         };
-    } else if (roll <= 15) {
+    } else if (roll >= 6 && roll <= 15) {
         return {
             Name: "Gnome",
             Modifiers : {
@@ -27,7 +27,7 @@ export function generateRace() {
                 Charisma: 0
             }
         };
-    } else if (roll <= 25) {
+    } else if (roll >= 16 && roll <= 25) {
         return {
             Name: "Dwarf",
             Modifiers : {
@@ -39,7 +39,7 @@ export function generateRace() {
                 Charisma: 0
             }
         };
-    } else if (roll <= 40) {
+    } else if (roll >= 26 && roll <= 60) {
         return {
             Name: "Human",
             Modifiers : {
@@ -51,7 +51,7 @@ export function generateRace() {
                 Charisma: 1
             }
         };
-    } else if (roll <= 60) {
+    } else if (roll >= 61 && roll <= 70) {
         return {
             Name: "Elf",
             Modifiers : {
@@ -63,7 +63,7 @@ export function generateRace() {
                 Charisma: 0
             }
         };
-    } else if (roll <= 70) {
+    } else if (roll >= 71 && roll <= 80) {
         return {
             Name: "Half-Elf",
             Modifiers : {
@@ -75,7 +75,7 @@ export function generateRace() {
                 Charisma: 2
             }
         };
-    } else if (roll <= 80) {
+    } else if (roll >= 81 && roll <= 90) {
         return {
             Name: "Halfling",
             Modifiers : {
@@ -87,7 +87,7 @@ export function generateRace() {
                 Charisma: 0
             }
         };
-    } else if (roll <= 90) {
+    } else if (roll >= 91 && roll <= 95) {
         return {
             Name: "Half-Orc",
             Modifiers : {
@@ -99,7 +99,7 @@ export function generateRace() {
                 Charisma: 0
             }
         };
-    } else if (roll <= 95) {
+    } else if (roll >= 96 && roll <= 100) {
         return {
             Name: "Tiefling",
             Modifiers : {
