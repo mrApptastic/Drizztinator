@@ -18,5 +18,5 @@
  ];
 
 export function generateName() {
-    return names[Math.floor(Math.random() * names.length - 1)];
+    return names[Math.floor(Math.random() * names.length)];
 }

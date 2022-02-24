@@ -8,6 +8,9 @@ import * as characterSheet from '../functions/characterSheetHelper.js';
 
 export default {
   name: 'Character',
+  // props: {
+  //   character
+  // },
   data: function () {
     return {
       character: characterGenerator.generateCharacter(),
@@ -15,7 +18,11 @@ export default {
     };
   },
   mounted: function () {
-      this.link = characterSheet.downloadCharacter(this.character);      
+    characterSheet.downloadCharacter(this.character).then(x => {
+      this.link = x;
+    }, e => {
+      console.log(e);
+    });      
   }
 };
 
