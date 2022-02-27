@@ -6,6 +6,31 @@ export function generateRace() {
     if (roll === 1) {
         return {
             Name: "Dragonborn",
+            Appearance: {
+                Age: 15,
+                Height: 76,
+                Weight: 250,
+                Eyes: [
+                    "Black",
+                    "Grey",
+                    "Red"
+                ],
+                Hair: [
+                    "None"
+                ],
+                Skin: [
+                    "Black",
+                    "Blue",
+                    "Brass",
+                    "Bronze",
+                    "Copper",
+                    "Gold",
+                    "Green",
+                    "Red",
+                    "Silver",
+                    "White"
+                ]
+            },
             Modifiers : {
                 Strength: 2,
                 Dexterity: 0,
@@ -16,6 +41,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [
                 {
@@ -46,6 +85,29 @@ export function generateRace() {
     } else if (roll >= 2 && roll <= 5) {
         return {
             Name: "Rock Gnome",
+            Appearance: {
+                Age: 40,
+                Height: 38,
+                Weight: 45,
+                Eyes: [
+                    "Brown",
+                    "Blue",
+                    "Green",
+                    "Grey"
+                ],
+                Hair: [
+                    "Black",
+                    "Red",
+                    "Blonde",
+                    "Brown",
+                    "Grey"
+                ],
+                Skin: [
+                    "Tan",
+                    "Brown",
+                    "Fair"
+                ]
+            },
             Modifiers : {
                 Strength: 0,
                 Dexterity: 0,
@@ -58,6 +120,20 @@ export function generateRace() {
             Proficiencies: [
                 "Tinker's tools"
             ],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 25,
             Abilities: [
                 {
@@ -96,6 +172,29 @@ export function generateRace() {
     } else if (roll === 6) {
         return {
             Name: "Deep Gnome",
+            Appearance: {
+                Age: 25,
+                Height: 42,
+                Weight: 100,
+                Eyes: [
+                    "Brown",
+                    "Blue",
+                    "Green",
+                    "Grey"
+                ],
+                Hair: [
+                    "Black",
+                    "Red",
+                    "Blonde",
+                    "Brown",
+                    "Grey"
+                ],
+                Skin: [
+                    "Tan",
+                    "Brown",
+                    "Fair"
+                ]
+            },
             Modifiers : {
                 Strength: 0,
                 Dexterity: 1,
@@ -106,6 +205,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 25,
             Abilities: [
                 {
@@ -141,6 +254,29 @@ export function generateRace() {
     } else if (roll >= 7 && roll <= 12) {
         return {
             Name: "Hill Dwarf",
+            Appearance: {
+                Age: 50,
+                Height: 54,
+                Weight: 150,
+                Eyes: [
+                    "Brown",
+                    "Blue",
+                    "Green",
+                    "Grey"
+                ],
+                Hair: [
+                    "Black",
+                    "Grey",
+                    "Brown",
+                    "Red"
+                ],
+                Skin: [
+                    "Deep Brown",
+                    "Pale",
+                    "Light Brown",
+                    "Deep Tan"
+                ]
+            },
             Modifiers : {
                 Strength: 0,
                 Dexterity: 0,
@@ -151,13 +287,27 @@ export function generateRace() {
             },
             HitPoints: 1,
             Proficiencies: [
-                "Smith’s tools",
+                "Smith's tools",
                 "Battle Axe",
                 "Handaxe",
                 "Light Hammer",
                 "Warhammer"
 
             ],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 25,
             Abilities: [
                 {
@@ -196,6 +346,29 @@ export function generateRace() {
     } else if (roll >= 13 && roll <= 17) {
         return {
             Name: "Mountain Dwarf",
+            Appearance: {
+                Age: 50,
+                Height: 54,
+                Weight: 150,
+                Eyes: [
+                    "Brown",
+                    "Blue",
+                    "Green",
+                    "Grey"
+                ],
+                Hair: [
+                    "Black",
+                    "Grey",
+                    "Brown",
+                    "Red"
+                ],
+                Skin: [
+                    "Deep Brown",
+                    "Pale",
+                    "Light Brown",
+                    "Deep Tan"
+                ]
+            },
             Modifiers : {
                 Strength: 2,
                 Dexterity: 0,
@@ -206,7 +379,7 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [
-                "Smith’s tools",
+                "Smith's tools",
                 "Battle Axe",
                 "Handaxe",
                 "Light Hammer",
@@ -214,6 +387,20 @@ export function generateRace() {
                 "Light Armor",
                 "Medium Armor"
             ],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 25,
             Abilities: [
                 {
@@ -248,6 +435,20 @@ export function generateRace() {
     } else if (roll >= 18 && roll <= 23) {
         return {
             Name: "Human (Calishite)",
+            Appearance: {
+                Age: 18,
+                Height: 64,
+                Weight: 185,
+                Eyes: [
+                    "Dusky brown"
+                ],
+                Hair: [
+                    "Dusky brown"
+                ],
+                Skin: [
+                    "Dusky brown"
+                ]
+            },
             Modifiers : {
                 Strength: 1,
                 Dexterity: 1,
@@ -258,6 +459,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [],
             Languages : [
@@ -279,6 +494,26 @@ export function generateRace() {
     } else if (roll >= 24 && roll <= 48) {
         return {
             Name: "Human (Chondathan)",
+            Appearance: {
+                Age: 18,
+                Height: 68,
+                Weight: 190,
+                Eyes: [
+                    "Green",
+                    "Brown",
+                    "Blue",
+                    "Grey"
+                ],
+                Hair: [
+                    "Fair Brown",
+                    "Dark Brown",
+                    "Blonde",
+                    "Black"
+                ],
+                Skin: [
+                    "Tawny"
+                ]
+            },
             Modifiers : {
                 Strength: 1,
                 Dexterity: 1,
@@ -289,6 +524,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [],
             Languages : [
@@ -310,6 +559,25 @@ export function generateRace() {
     } else if (roll >= 49 && roll <= 52) {
         return {
             Name: "Human (Damaran)",
+            Appearance: {
+                Age: 18,
+                Height: 66,
+                Weight: 200,
+                Eyes: [
+                    "Brown",
+                    "Grey",
+                    "Blue",
+                    "Green"
+                ],
+                Hair: [
+                    "Brown",
+                    "Black"
+                ],
+                Skin: [
+                    "Tawny",
+                    "Fair"
+                ]
+            },
             Modifiers : {
                 Strength: 1,
                 Dexterity: 1,
@@ -320,6 +588,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [],
             Languages : [
@@ -341,6 +623,25 @@ export function generateRace() {
     } else if (roll >= 53 && roll <= 67) {
         return {
             Name: "Human (Illuskan)",
+            Appearance: {
+                Age: 18,
+                Height: 68,
+                Weight: 200,
+                Eyes: [
+                    "Blue",
+                    "Grey"
+                ],
+                Hair: [
+                    "Brown",
+                    "Black",
+                    "Red",
+                    "Light Brown",
+                    "Blonde"
+                ],
+                Skin: [
+                    "Fair"
+                ]
+            },
             Modifiers : {
                 Strength: 1,
                 Dexterity: 1,
@@ -351,6 +652,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [],
             Languages : [
@@ -372,6 +687,22 @@ export function generateRace() {
     } else if (roll >= 68 && roll <= 70) {
         return {
             Name: "Human (Mulan)",
+            Appearance: {
+                Age: 18,
+                Height: 68,
+                Weight: 185,
+                Eyes: [
+                    "Hazel",
+                    "Brown"
+                ],
+                Hair: [
+                    "Black",
+                    "Brown"
+                ],
+                Skin: [
+                    "Amber"
+                ]
+            },
             Modifiers : {
                 Strength: 1,
                 Dexterity: 1,
@@ -382,6 +713,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [],
             Languages : [
@@ -403,6 +748,22 @@ export function generateRace() {
     } else if (roll >= 71 && roll <= 72) {
         return {
             Name: "Human (Rashemi)",
+            Appearance: {
+                Age: 18,
+                Height: 64,
+                Weight: 215,
+                Eyes: [
+                    "Brown",
+                    "Black"
+                ],
+                Hair: [
+                    "Black",
+                    "Dark Brown"
+                ],
+                Skin: [
+                    "Dusky"
+                ]
+            },
             Modifiers : {
                 Strength: 1,
                 Dexterity: 1,
@@ -413,6 +774,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [],
             Languages : [
@@ -434,6 +809,22 @@ export function generateRace() {
     } else if (roll === 73) {
         return {
             Name: "Human (Shou)",
+            Appearance: {
+                Age: 18,
+                Height: 66,
+                Weight: 200,
+                Eyes: [
+                    "Brown",
+                    "Black",
+                    "Green"
+                ],
+                Hair: [
+                    "Black"
+                ],
+                Skin: [
+                    "Yellowish-bronze"
+                ]
+            },
             Modifiers : {
                 Strength: 1,
                 Dexterity: 1,
@@ -444,6 +835,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [],
             Languages : [
@@ -465,6 +870,27 @@ export function generateRace() {
     } else if (roll >= 74 && roll <= 78) {
         return {
             Name: "Human (Tethyrian)",
+            Appearance: {
+                Age: 15,
+                Height: 76,
+                Weight: 250,
+                Eyes: [
+                    "Grey",
+                    "Brown",
+                    "Blue",
+                    "Green"
+                ],
+                Hair: [
+                    "Black",
+                    "Brown",
+                    "Blonde",
+                    "Red"
+                ],
+                Skin: [
+                    "Dusky",
+                    "Fair"
+                ]
+            },
             Modifiers : {
                 Strength: 1,
                 Dexterity: 1,
@@ -475,6 +901,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [],
             Languages : [
@@ -496,6 +936,20 @@ export function generateRace() {
     } else if (roll >= 79 && roll <= 80) {
         return {
             Name: "Human (Turami)",
+            Appearance: {
+                Age: 18,
+                Height: 68,
+                Weight: 215,
+                Eyes: [
+                    "Dark"
+                ],
+                Hair: [
+                    "Curly black"
+                ],
+                Skin: [
+                    "Dark Mahogony"
+                ]
+            },
             Modifiers : {
                 Strength: 1,
                 Dexterity: 1,
@@ -506,6 +960,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [],
             Languages : [
@@ -527,6 +995,31 @@ export function generateRace() {
     } else if (roll === 81) {
         return {
             Name: "Eladrin Elf",
+            Appearance: {
+                Age: 15,
+                Height: 76,
+                Weight: 250,
+                Eyes: [
+                    "Black",
+                    "Grey",
+                    "Red"
+                ],
+                Hair: [
+                    "None"
+                ],
+                Skin: [
+                    "Black",
+                    "Blue",
+                    "Brass",
+                    "Bronze",
+                    "Copper",
+                    "Gold",
+                    "Green",
+                    "Red",
+                    "Silver",
+                    "White"
+                ]
+            },
             Modifiers : {
                 Strength: 0,
                 Dexterity: 2,
@@ -537,25 +1030,40 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [
-                "Perception",
                 "Longsword",
                 "Shortsword",
                 "Shortbow",
                 "Longbow"
-            ],
+            ],            
+            Skills: {
+                Count: 1,
+                List: [
+                    "Perception"
+                ]
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [
                 {
                     Name: "Darkvision",
-                    Description: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray."
+                    Description: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
                 },
                 {
                     Name: "Fey Ancestry",
-                    Description: "You have advantage on saving throws against being charmed, and magic can’t put you to sleep."
+                    Description: "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
                 },
                 {
                     Name: "Trance",
-                    Description : "Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
+                    Description : "Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
                 },
                 {
                     Name: "Fey Step",
@@ -581,6 +1089,31 @@ export function generateRace() {
     } else if (roll >= 82 && roll <= 83) {
         return {
             Name: "High Elf",
+            Appearance: {
+                Age: 15,
+                Height: 76,
+                Weight: 250,
+                Eyes: [
+                    "Black",
+                    "Grey",
+                    "Red"
+                ],
+                Hair: [
+                    "None"
+                ],
+                Skin: [
+                    "Black",
+                    "Blue",
+                    "Brass",
+                    "Bronze",
+                    "Copper",
+                    "Gold",
+                    "Green",
+                    "Red",
+                    "Silver",
+                    "White"
+                ]
+            },
             Modifiers : {
                 Strength: 0,
                 Dexterity: 2,
@@ -591,25 +1124,56 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [
-                "Perception",
+
                 "Longsword",
                 "Shortsword",
                 "Shortbow",
                 "Longbow"
-            ],
+            ],            
+            Skills: {
+                Count: 1,
+                List: [
+                    "Perception"
+                ]
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 1,
+                    List: [
+                        "Acid Splash",
+                        "Chill Touch",
+                        "Dancing Lights",
+                        "Fire Bolt",
+                        "Light",
+                        "Mage Hand",
+                        "Mending",
+                        "Message",
+                        "Minor Illusion",
+                        "Poison Spray",
+                        "Prestidigitation",
+                        "Ray of Frost",
+                        "Shocking Grasp",
+                        "True Strike"
+                    ]
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [
                 {
                     Name: "Darkvision",
-                    Description: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray."
+                    Description: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
                 },
                 {
                     Name: "Fey Ancestry",
-                    Description: "You have advantage on saving throws against being charmed, and magic can’t put you to sleep."
+                    Description: "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
                 },
                 {
                     Name: "Trance",
-                    Description : "Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
+                    Description : "Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
                 },
                 {
                     Name: "Cantrip",
@@ -636,6 +1200,31 @@ export function generateRace() {
     } else if (roll >= 84 && roll <= 87) {
         return {
             Name: "Wood Elf",
+            Appearance: {
+                Age: 15,
+                Height: 76,
+                Weight: 250,
+                Eyes: [
+                    "Black",
+                    "Grey",
+                    "Red"
+                ],
+                Hair: [
+                    "None"
+                ],
+                Skin: [
+                    "Black",
+                    "Blue",
+                    "Brass",
+                    "Bronze",
+                    "Copper",
+                    "Gold",
+                    "Green",
+                    "Red",
+                    "Silver",
+                    "White"
+                ]
+            },
             Modifiers : {
                 Strength: 0,
                 Dexterity: 2,
@@ -646,25 +1235,40 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [
-                "Perception",
                 "Longsword",
                 "Shortsword",
                 "Shortbow",
                 "Longbow"
             ],
+            Skills: {
+                Count: 1,
+                List: [
+                    "Perception"
+                ]
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 35,
             Abilities: [
                 {
                     Name: "Darkvision",
-                    Description: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray."
+                    Description: "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
                 },
                 {
                     Name: "Fey Ancestry",
-                    Description: "You have advantage on saving throws against being charmed, and magic can’t put you to sleep."
+                    Description: "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
                 },
                 {
                     Name: "Trance",
-                    Description : "Elves don’t need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
+                    Description : "Elves don't need to sleep. Instead, they meditate deeply, remaining semiconscious, for 4 hours a day. (The Common word for such meditation is “trance.”) While meditating, you can dream after a fashion; such dreams are actually mental exercises that have become reflexive through years of practice. After resting in this way, you gain the same benefit that a human does from 8 hours of sleep."
                 },
                 {
                     Name: "Mask of the Wild",
@@ -690,6 +1294,31 @@ export function generateRace() {
     } else if (roll >= 88 && roll <= 92) {
         return {
             Name: "Half-Elf",
+            Appearance: {
+                Age: 15,
+                Height: 76,
+                Weight: 250,
+                Eyes: [
+                    "Black",
+                    "Grey",
+                    "Red"
+                ],
+                Hair: [
+                    "None"
+                ],
+                Skin: [
+                    "Black",
+                    "Blue",
+                    "Brass",
+                    "Bronze",
+                    "Copper",
+                    "Gold",
+                    "Green",
+                    "Red",
+                    "Silver",
+                    "White"
+                ]
+            },
             Modifiers : {
                 Strength: 1,
                 Dexterity: 1,
@@ -699,19 +1328,49 @@ export function generateRace() {
                 Charisma: 2
             },
             HitPoints: 0,
-            Proficiencies: [
-                "Perception",
-                "Acrobatics"
-            ],
+            Proficiencies: [],
+            Skills: {
+                Count: 2,
+                List: [
+                    "Acrobatics",
+                    "Animal Handling",
+                    "Arcana",
+                    "Athletics",
+                    "Deception",
+                    "History",
+                    "Insight",
+                    "Intimidation",
+                    "Investigation",
+                    "Medicine",
+                    "Nature",
+                    "Perception",
+                    "Performance",
+                    "Persuasion",
+                    "Religion",
+                    "Sleight of Hand",
+                    "Stealth",
+                    "Survival"
+                ]
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [
                 {
                     Name: "Darkvision",
-                    Description: "Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray."
+                    Description: "Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
                 },
                 {
                     Name: "Fey Ancestry",
-                    Description: "You have advantage on saving throws against being charmed, and magic can’t put you to sleep."
+                    Description: "You have advantage on saving throws against being charmed, and magic can't put you to sleep."
                 }
             ],
             Languages : [
@@ -734,6 +1393,31 @@ export function generateRace() {
     } else if (roll >= 93 && roll <= 95) {
         return {
             Name: "Lightfoot Halfling",
+            Appearance: {
+                Age: 15,
+                Height: 76,
+                Weight: 250,
+                Eyes: [
+                    "Black",
+                    "Grey",
+                    "Red"
+                ],
+                Hair: [
+                    "None"
+                ],
+                Skin: [
+                    "Black",
+                    "Blue",
+                    "Brass",
+                    "Bronze",
+                    "Copper",
+                    "Gold",
+                    "Green",
+                    "Red",
+                    "Silver",
+                    "White"
+                ]
+            },
             Modifiers : {
                 Strength: 0,
                 Dexterity: 2,
@@ -744,6 +1428,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 25,
             Abilities: [
                 {
@@ -782,6 +1480,31 @@ export function generateRace() {
     } else if (roll >= 96 && roll <= 97) {
         return {
             Name: "Stout  Halfling",
+            Appearance: {
+                Age: 15,
+                Height: 76,
+                Weight: 250,
+                Eyes: [
+                    "Black",
+                    "Grey",
+                    "Red"
+                ],
+                Hair: [
+                    "None"
+                ],
+                Skin: [
+                    "Black",
+                    "Blue",
+                    "Brass",
+                    "Bronze",
+                    "Copper",
+                    "Gold",
+                    "Green",
+                    "Red",
+                    "Silver",
+                    "White"
+                ]
+            },
             Modifiers : {
                 Strength: 0,
                 Dexterity: 2,
@@ -792,6 +1515,20 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 25,
             Abilities: [
                 {
@@ -830,6 +1567,31 @@ export function generateRace() {
     } else if (roll >= 98 && roll <= 99) {
         return {
             Name: "Half-Orc",
+            Appearance: {
+                Age: 15,
+                Height: 76,
+                Weight: 250,
+                Eyes: [
+                    "Black",
+                    "Grey",
+                    "Red"
+                ],
+                Hair: [
+                    "None"
+                ],
+                Skin: [
+                    "Black",
+                    "Blue",
+                    "Brass",
+                    "Bronze",
+                    "Copper",
+                    "Gold",
+                    "Green",
+                    "Red",
+                    "Silver",
+                    "White"
+                ]
+            },
             Modifiers : {
                 Strength: 2,
                 Dexterity: 0,
@@ -839,18 +1601,32 @@ export function generateRace() {
                 Charisma: 0
             },
             HitPoints: 0,
-            Proficiencies: [
-                "Intimidation"
-            ],
+            Proficiencies: [],
+            Skills: {
+                Count: 1,
+                List: [
+                    "Intimidation"
+                ]
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 0,
+                    List: []
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [
                 {
                     Name: "Relentless Endurance",
-                    Description: "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can’t use this feature again until you finish a long rest."
+                    Description: "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest."
                 },
                 {
                     Name: "Savage Attacks",
-                    Description: "When you score a critical hit with a melee weapon attack, you can roll one of the weapon’s damage dice one additional time and add it to the extra damage of the critical hit."
+                    Description: "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit."
                 }
             ],
             Languages : [
@@ -872,6 +1648,31 @@ export function generateRace() {
     } else if (roll === 100) {
         return {
             Name: "Tiefling",
+            Appearance: {
+                Age: 15,
+                Height: 76,
+                Weight: 250,
+                Eyes: [
+                    "Black",
+                    "Grey",
+                    "Red"
+                ],
+                Hair: [
+                    "None"
+                ],
+                Skin: [
+                    "Black",
+                    "Blue",
+                    "Brass",
+                    "Bronze",
+                    "Copper",
+                    "Gold",
+                    "Green",
+                    "Red",
+                    "Silver",
+                    "White"
+                ]
+            },
             Modifiers : {
                 Strength: 0,
                 Dexterity: 0,
@@ -882,11 +1683,27 @@ export function generateRace() {
             },
             HitPoints: 0,
             Proficiencies: [],
+            Skills: {
+                Count: 0,
+                List: []
+            },
+            Spells : {
+                Cantrips: {
+                    Count: 1,
+                    List: [
+                        "Thaumaturgy"
+                    ]
+                },
+                Lvl1: {
+                    Count: 0,
+                    List: []
+                },
+            },
             Speed: 30,
             Abilities: [
                 {
                     Name: "Darkvision",
-                    Description: "Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray."
+                    Description: "Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
                 },
                 {
                     Name: "Hellish Resistance",

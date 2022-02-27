@@ -1,24 +1,34 @@
 <template>
-    <a v-if="!!character" v-bind:href="link" target="_blank">{{character.Name}}</a>
+  <tr>
+    <td>
+      {{character.Name}}
+    </td>
+    <td>
+      {{character.Race.Name}} {{character.Class.Name}}
+    </td>
+    <td>
+      <a v-if="link" v-bind:href="link" target="_blank">Download</a>
+    </td>
+  </tr>
 </template>
 
 <script>
-import * as characterGenerator from '../functions/characterGenerator.js';
 import * as characterSheet from '../functions/characterSheetHelper.js';
 
 export default {
   name: 'Character',
-  // props: {
-  //   character
-  // },
-  data: function () {
+  props: {
+    character: Object
+  },
+    data: function () {
     return {
-      character: characterGenerator.generateCharacter(),
       link: null
     };
   },
   mounted: function () {
-    characterSheet.downloadCharacter(this.character).then(x => {
+
+    const ib = JSON.parse(JSON.stringify(this.character));
+    characterSheet.downloadCharacter(ib).then(x => {
       this.link = x;
     }, e => {
       console.log(e);
@@ -26,7 +36,6 @@ export default {
   }
 };
 
-// characterSheet.downloadCharacter();
 </script>
 
 <style scoped>

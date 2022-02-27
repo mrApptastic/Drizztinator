@@ -1,26 +1,31 @@
 import * as dice from "./diceHelper.js";
 import * as origin from "./raceGenerator.js";
 import * as profession from "./classGenerator.js";
+import * as personality from "./backgroundGenerator.js";
 
 export function generateCharacter() {
     const gender = dice.roll(2) === 1 ? "Male" : "Female";
     const race = origin.generateRace();
     const name = race.Names[gender][Math.floor(Math.random() * race.Names[gender].length)] + " " + race.Names.Surname[Math.floor(Math.random() * race.Names.Surname.length)];
+    const stats = {
+        Strength: dice.rollStat(),
+        Dexterity: dice.rollStat(),
+        Constitution: dice.rollStat(),
+        Intelligence: dice.rollStat(),
+        Wisdom: dice.rollStat(),
+        Charisma: dice.rollStat()
+    };
+    const highest = getHighestStat(stats);
     
     const obj = {
+        Id: new Date().getTime(),
         Name : name,
         Race : race,
         Gender : gender,
-        Class : profession.generateClass(),
+        Class : profession.generateClass(highest),
+        Background: personality.generateBackground(),
         Alignment : generateAlignment(),
-        Stats : {
-            Strength: dice.rollStat(),
-            Dexterity: dice.rollStat(),
-            Constitution: dice.rollStat(),
-            Intelligence: dice.rollStat(),
-            Wisdom: dice.rollStat(),
-            Charisma: dice.rollStat()
-        }
+        Stats : stats
     };
 
     return obj;
@@ -50,6 +55,18 @@ function generateAlignment() {
     }
 }
 
+function getHighestStat(stats) {
+    let current = 0;
+    let highest = "";
+    for (let stat in stats) {
+        if (stats[stat] > current) {
+            current = stats[stat];
+            highest = stat;
+        }
+    }
 
+    return highest;
+
+}
 
 
