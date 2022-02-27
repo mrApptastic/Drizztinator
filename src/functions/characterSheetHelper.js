@@ -148,7 +148,43 @@ export async function downloadCharacter(character) {
   // Wpn1 AtkBonus
   // Wpn1 Damage
   // Wpn Name 2
-
+  /* Saves */
+  if (character.Class.Saves.Strength) {    
+    form.getCheckBox('Check Box 11').check();
+    form.getTextField('ST Strength').setText((strBonus + 2).toString());    
+  } else {
+    form.getTextField('ST Strength').setText(strBonus.toString());
+  }
+  if (character.Class.Saves.Dexterity) {    
+    form.getCheckBox('Check Box 18').check();
+    form.getTextField('ST Dexterity').setText((dexBonus + 2).toString());    
+  } else {
+    form.getTextField('ST Dexterity').setText(dexBonus.toString());
+  }
+  if (character.Class.Saves.Constitution) {    
+    form.getCheckBox('Check Box 19').check();
+    form.getTextField('ST Constitution').setText((conBonus + 2).toString());    
+  } else {
+    form.getTextField('ST Constitution').setText(conBonus.toString());
+  }
+  if (character.Class.Saves.Intelligence) {    
+    form.getCheckBox('Check Box 20').check();
+    form.getTextField('ST Intelligence').setText((intBonus + 2).toString());    
+  } else {
+    form.getTextField('ST Intelligence').setText(intBonus.toString());
+  }
+  if (character.Class.Saves.Wisdom) {    
+    form.getCheckBox('Check Box 21').check();
+    form.getTextField('ST Wisdom').setText((wisBonus + 2).toString());    
+  } else {
+    form.getTextField('ST Wisdom').setText(wisBonus.toString());
+  }
+  if (character.Class.Saves.Charisma) {    
+    form.getCheckBox('Check Box 22').check();
+    form.getTextField('ST Charisma').setText((chaBonus + 2).toString());    
+  } else {
+    form.getTextField('ST Charisma').setText(chaBonus.toString());
+  }
   /* Skills */
   let skills = character.Background.Skills;
 
@@ -176,7 +212,114 @@ export async function downloadCharacter(character) {
   
   skills = skills.sort();
 
-  console.log(skills);
+  if (skills.includes("Acrobatics")) {    
+    form.getCheckBox('Check Box 23').check();
+    form.getTextField('Acrobatics').setText((dexBonus + 2).toString());    
+  } else {
+    form.getTextField('Acrobatics').setText(dexBonus.toString());
+  }
+  if (skills.includes("Animal Handling")) {    
+    form.getCheckBox('Check Box 24').check();
+    form.getTextField('Animal').setText((wisBonus + 2).toString());    
+  } else {
+    form.getTextField('Animal').setText(wisBonus.toString());
+  }
+  if (skills.includes("Arcana")) {    
+    form.getCheckBox('Check Box 25').check();
+    form.getTextField('Arcana').setText((intBonus + 2).toString());    
+  } else {
+    form.getTextField('Arcana').setText(intBonus.toString());
+  }
+  if (skills.includes("Athletics")) {    
+    form.getCheckBox('Check Box 26').check();
+    form.getTextField('Athletics').setText((strBonus + 2).toString());    
+  } else {
+    form.getTextField('Athletics').setText(strBonus.toString());
+  }
+  if (skills.includes("Deception")) {    
+    form.getCheckBox('Check Box 27').check();
+    form.getTextField('Deception ').setText((chaBonus + 2).toString());    
+  } else {
+    form.getTextField('Deception ').setText(chaBonus.toString());
+  }
+  if (skills.includes("History")) {    
+    form.getCheckBox('Check Box 28').check();
+    form.getTextField('History ').setText((intBonus + 2).toString());    
+  } else {
+    form.getTextField('History ').setText(intBonus.toString());
+  }
+  if (skills.includes("Insight")) {    
+    form.getCheckBox('Check Box 29').check();
+    form.getTextField('Insight').setText((wisBonus + 2).toString());    
+  } else {
+    form.getTextField('Insight').setText(wisBonus.toString());
+  }
+  if (skills.includes("Intimidation")) {    
+    form.getCheckBox('Check Box 30').check();
+    form.getTextField('Intimidation').setText((chaBonus + 2).toString());    
+  } else {
+    form.getTextField('Intimidation').setText(chaBonus.toString());
+  }
+  if (skills.includes("Investigation")) {    
+    form.getCheckBox('Check Box 31').check();
+    form.getTextField('Investigation ').setText((intBonus + 2).toString());    
+  } else {
+    form.getTextField('Investigation ').setText(intBonus.toString());
+  }
+  if (skills.includes("Medicine")) {    
+    form.getCheckBox('Check Box 32').check();
+    form.getTextField('Medicine').setText((wisBonus + 2).toString());    
+  } else {
+    form.getTextField('Medicine').setText(wisBonus.toString());
+  }
+  if (skills.includes("Nature")) {    
+    form.getCheckBox('Check Box 33').check();
+    form.getTextField('Nature').setText((intBonus + 2).toString());    
+  } else {
+    form.getTextField('Nature').setText(intBonus.toString());
+  }
+  if (skills.includes("Perception")) {    
+    form.getCheckBox('Check Box 34').check();
+    form.getTextField('Perception ').setText((wisBonus + 2).toString());    
+  } else {
+    form.getTextField('Perception ').setText(wisBonus.toString());
+  }
+  if (skills.includes("Performance")) {    
+    form.getCheckBox('Check Box 35').check();
+    form.getTextField('Performance').setText((wisBonus + 2).toString());    
+  } else {
+    form.getTextField('Performance').setText(wisBonus.toString());
+  }
+  if (skills.includes("Persuasion")) {    
+    form.getCheckBox('Check Box 36').check();
+    form.getTextField('Persuasion').setText((chaBonus + 2).toString());    
+  } else {
+    form.getTextField('Persuasion').setText(chaBonus.toString());
+  }
+  if (skills.includes("Religion")) {    
+    form.getCheckBox('Check Box 37').check();
+    form.getTextField('Religion').setText((wisBonus + 2).toString());    
+  } else {
+    form.getTextField('Religion').setText(wisBonus.toString());
+  }
+  if (skills.includes("Sleight of Hand")) {    
+    form.getCheckBox('Check Box 38').check();
+    form.getTextField('SleightofHand').setText((dexBonus + 2).toString());    
+  } else {
+    form.getTextField('SleightofHand').setText(dexBonus.toString());
+  }
+  if (skills.includes("Stealth")) {    
+    form.getCheckBox('Check Box 39').check();
+    form.getTextField('Stealth ').setText((dexBonus + 2).toString());    
+  } else {
+    form.getTextField('Stealth ').setText(dexBonus.toString());
+  }
+  if (skills.includes("Survival")) {    
+    form.getCheckBox('Check Box 40').check();
+    form.getTextField('Survival').setText((wisBonus + 2).toString());    
+  } else {
+    form.getTextField('Survival').setText(wisBonus.toString());
+  }
       
   const pdfBytes = await pdfDoc.save();
 

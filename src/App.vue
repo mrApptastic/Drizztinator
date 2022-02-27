@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="container">
-    <MainHeader />
-    <MainView msg="Every Body Say Drizzzzzzt!" />
+    <MainHeader heading="Every Body Say Drizzzzzzt!" />
+    <MainView  />
   </div>
 </template>
 

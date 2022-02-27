@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>{{ msg }}</h1>
     <div>
       <table>
         <thead>
@@ -24,9 +23,6 @@ import * as charGen from '../functions/characterGenerator.js';
 
 export default {
   name: 'MainView',
-  props: {
-    msg: String,
-  },
   components: {
     Character    
   },
