@@ -41,7 +41,6 @@ export default {
   
 };
 
-// characterSheet.downloadCharacter();
 </script>
 
 <style scoped></style>

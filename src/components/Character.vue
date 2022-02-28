@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import * as characterSheet from '../functions/characterSheetHelper.js';
+import * as characterSheet from '../functions/characterSheetGenerator.js';
 
 export default {
   name: 'Character',

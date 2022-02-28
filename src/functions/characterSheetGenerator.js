@@ -1,12 +1,10 @@
 import { Ib } from '../assets/characterSheet.js';
-import * as charGen from '../functions/characterGenerator.js';
-import * as rule from '../functions/rules.js';
-import * as dice from '../functions/diceHelper.js';
+import * as rule from './rules.js';
+import * as dice from './diceHelper.js';
 
 import { PDFDocument } from 'pdf-lib';
 
 export async function downloadCharacter(character) {
-  // const character = charGen.generateCharacter();
   const formUrl = Ib;
  
   const formPdfBytes = await fetch(formUrl, {
@@ -131,17 +129,17 @@ export async function downloadCharacter(character) {
     form.getTextField('Wpn Name').setText("Dagger");
   }
   if (equipment.includes("Longbow")) {
-    form.getTextField('Wpn Name 2').setText("Longbow");
+    form.getTextField('Wpn Name 2').setText("Longbow*");
   } else if (equipment.includes("Light Crossbow")) {
-    form.getTextField('Wpn Name 2').setText("Light Crossbow");
+    form.getTextField('Wpn Name 2').setText("Light Crossbow*");
   } else if (equipment.includes("Shortbow")) {
-    form.getTextField('Wpn Name 2').setText("Shortbow");
+    form.getTextField('Wpn Name 2').setText("Shortbow*");
   } else if (equipment.includes("4 Javelins")) {
-    form.getTextField('Wpn Name 2').setText("Thrown Javelin");
+    form.getTextField('Wpn Name 2').setText("Thrown Javelin*");
   } else if (equipment.includes("10 Darts")) {
-    form.getTextField('Wpn Name 2').setText("Dart");
+    form.getTextField('Wpn Name 2').setText("Dart*");
   } else if (equipment.includes('Dagger') || equipment.includes('2 Daggers')) {
-    form.getTextField('Wpn Name 2').setText("Thrown Dagger");
+    form.getTextField('Wpn Name 2').setText("Thrown Dagger*");
   } 
 
   // form.getTextField('Wpn Name').setText(traitsText);
@@ -326,11 +324,8 @@ export async function downloadCharacter(character) {
   var blob = new Blob([pdfBytes], { type: "application/pdf" });
   var urlCreator = window.URL || window.webkitURL;
   var imageUrl = urlCreator.createObjectURL(blob);
-  // window.open(imageUrl);
 
   return imageUrl;
-
-  // download(pdfBytes, character.Name + '.pdf', 'application/pdf');
 }
 
 function getIdeals(character) {
