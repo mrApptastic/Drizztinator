@@ -392,12 +392,12 @@ export async function downloadCharacter(character) {
   /* Appearance */
   const age = Math.round(character.Race.Appearance.Age * (1 + ((dice.roll(100)) / 100)));  
   form.getTextField('Age').setText(age.toString());
-  const inches = Math.round(character.Race.Appearance.Height * (0.8 + ((dice.roll(40)) / 100)));
+  const inches = Math.round(character.Race.Appearance.Height * 0.9 + ((dice.roll(20)) / 100));
   const feet = Math.floor(inches / 12);
-  const remainingInches = feet % 12;
+  const remainingInches = inches % 12;
   const height = feet + "'" + remainingInches + "''"; 
-  form.getTextField('Height').setText(inches.toString());
-  const weight = Math.round(character.Race.Appearance.Weight * (0.7 + ((dice.roll(60)) / 100)));
+  form.getTextField('Height').setText(height.toString());
+  const weight = Math.round(character.Race.Appearance.Weight * 0.8 + ((dice.roll(40)) / 100));
   form.getTextField('Weight').setText(weight.toString() + " lbs.");
   const eyes = character.Race.Appearance.Eyes[Math.floor(Math.random() * character.Race.Appearance.Eyes.length)];
   form.getTextField('Eyes').setText(eyes);
@@ -405,7 +405,122 @@ export async function downloadCharacter(character) {
   form.getTextField('Skin').setText(skin);
   const hair = character.Race.Appearance.Hair[Math.floor(Math.random() * character.Race.Appearance.Hair.length)];
   form.getTextField('Hair').setText(hair);
-  /* Finished PDF */
+  /* Spells */
+  let cantrips = [];
+  if (character.Race.Spells.Cantrips.Count > 0) {
+    while(cantrips.length !== character.Race.Spells.Cantrips.Count) {
+      const random = character.Race.Spells.Cantrips.List[Math.floor(Math.random() * character.Race.Spells.Cantrips.List.length)];  
+      if (!cantrips.includes(random)) {
+        cantrips.push(random);
+      }
+    }
+  }
+  if (character.Class.Spells.Cantrips.Count > 0) {
+    while(cantrips.length !== (character.Race.Spells.Cantrips.Count + character.Class.Spells.Cantrips.Count)) {
+      const random = character.Class.Spells.Cantrips.List[Math.floor(Math.random() * character.Class.Spells.Cantrips.List.length)];  
+      if (!cantrips.includes(random)) {
+        cantrips.push(random);
+      }
+    }
+  }
+  cantrips = cantrips.sort();
+  let firstLevel = [];
+  if (character.Race.Spells.Lvl1.Count > 0) {
+    while(firstLevel.length !== character.Race.Spells.Lvl1.Count) {
+      const random = character.Race.Spells.Lvl1.List[Math.floor(Math.random() * character.Race.Spells.Lvl1.List.length)];  
+      if (!firstLevel.includes(random)) {
+        firstLevel.push(random);
+      }
+    }
+  }
+  if (character.Class.Spells.Lvl1.Count > 0) {
+    while(firstLevel.length !== (character.Race.Spells.Lvl1.Count + character.Class.Spells.Lvl1.Count)) {
+      const random = character.Class.Spells.Lvl1.List[Math.floor(Math.random() * character.Class.Spells.Lvl1.List.length)];  
+      if (!firstLevel.includes(random)) {
+        firstLevel.push(random);
+      }
+    }
+  }
+  firstLevel = firstLevel.sort();
+  if (cantrips.length > 0 || firstLevel.length > 0) {
+    form.getTextField('Spellcasting Class 2').setText(character.Class.Name);
+    let stat = chaBonus;
+    if (character.Class.Name === "Wizard") {
+      stat = intBonus;
+    } else if (character.Class.Name === "Cleric" || character.Class.Name === "Druid") {
+      stat = wisBonus;
+    }
+    form.getTextField('SpellcastingAbility 2').setText("1".toString());
+    form.getTextField('SpellSaveDC  2').setText(formatBonus(10 + stat));
+    form.getTextField('SpellAtkBonus 2').setText(formatBonus(2 + stat));
+    if (cantrips.length >= 1) {
+      form.getTextField('Spells 1014').setText(cantrips[0]);      
+    }
+    if (cantrips.length >= 2) {
+      form.getTextField('Spells 1016').setText(cantrips[1]);      
+    }
+    if (cantrips.length >= 3) {
+      form.getTextField('Spells 1017').setText(cantrips[2]);      
+    }
+    if (cantrips.length >= 4) {
+      form.getTextField('Spells 1018').setText(cantrips[3]);      
+    }
+    if (cantrips.length >= 5) {
+      form.getTextField('Spells 1019').setText(cantrips[4]);      
+    }
+    if (cantrips.length >= 6) {
+      form.getTextField('Spells 1020').setText(cantrips[5]);      
+    }
+    if (cantrips.length >= 7) {
+      form.getTextField('Spells 1021').setText(cantrips[6]);      
+    }
+    if (cantrips.length >= 8) {
+      form.getTextField('Spells 1022').setText(cantrips[7]);      
+    }
+    if (firstLevel.length >= 1) {      
+      // form.getTextField('SlotsTotal 19').setText();    
+      form.getTextField('Spells 1015').setText(firstLevel[0]);      
+    }
+    if (firstLevel.length >= 2) {
+      form.getTextField('Spells 1023').setText(firstLevel[1]);      
+    }
+    if (firstLevel.length >= 3) {
+      form.getTextField('Spells 1024').setText(firstLevel[2]);      
+    }
+    if (firstLevel.length >= 4) {
+      form.getTextField('Spells 1025').setText(firstLevel[3]);      
+    }
+    if (firstLevel.length >= 5) {
+      form.getTextField('Spells 1026').setText(firstLevel[4]);      
+    }
+    if (firstLevel.length >= 6) {
+      form.getTextField('Spells 1027').setText(firstLevel[5]);      
+    }
+    if (firstLevel.length >= 7) {
+      form.getTextField('Spells 1028').setText(firstLevel[6]);      
+    }
+    if (firstLevel.length >= 8) {
+      form.getTextField('Spells 1029').setText(firstLevel[7]);      
+    }
+    if (firstLevel.length >= 9) {
+      form.getTextField('Spells 1030').setText(firstLevel[8]);      
+    }
+    if (firstLevel.length >= 10) {
+      form.getTextField('Spells 1031').setText(firstLevel[9]);      
+    }
+    if (firstLevel.length >= 11) {
+      form.getTextField('Spells 1032').setText(firstLevel[10]);      
+    }
+    if (firstLevel.length >= 12) {
+      form.getTextField('Spells 1033').setText(firstLevel[11]);      
+    }
+  }
+
+
+
+  
+  
+  /* Finishing PDF */
   const pdfBytes = await pdfDoc.save();
   var blob = new Blob([pdfBytes], { type: "application/pdf" });
   var urlCreator = window.URL || window.webkitURL;

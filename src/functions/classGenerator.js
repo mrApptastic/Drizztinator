@@ -108,11 +108,51 @@ const classes = [
         Spells : {
             Cantrips: {
                 Count: 2,
-                List: []
+                List: [
+                    "Blade Ward",
+                    "Dancing Lights",
+                    "Friends",
+                    "Light",
+                    "Mage Hand",
+                    "Mending",
+                    "Message",
+                    "Minor Illusion",
+                    "Prestidigitation",
+                    "Thunderclap",
+                    "True Strike",
+                    "Vicious Mockery"
+                ]
             },
             Lvl1: {
                 Count: 4,
-                List: []
+                List: [
+                    "Animal Friendship",
+                    "Bane",
+                    "Charm Person",
+                    "Color Spray",
+                    "Command",
+                    "Comprehend Languages",
+                    "Cure Wounds",
+                    "Detect Magic",
+                    "Disguise Self",
+                    "Dissonant Whispers",
+                    "Distort Value",
+                    "Earth Tremor",
+                    "Faerie Fire",
+                    "Feather Fall",
+                    "Healing Word",
+                    "Heroism",
+                    "Identify",
+                    "Illusory Script",
+                    "Longstrider",
+                    "Silent Image",
+                    "Silvery Barbs",
+                    "Sleep",
+                    "Speak with Animals",
+                    "Tasha's Hideous Laughter",
+                    "Thunderwave",
+                    "Unseen Servant"
+                ]
             },
         },
         Abilities: [
@@ -165,13 +205,37 @@ const classes = [
         Spells : {
             Cantrips: {
                 Count: 3,
-                List: []
+                List: [
+                    "Guidance",
+                    "Light",
+                    "Mending",
+                    "Resistance",
+                    "Sacred Flame",
+                    "Spare the Dying",
+                    "Thaumaturgy",
+                    "Toll the Dead",
+                    "Word of Radiance"
+                ]
             },
             Lvl1: {
                 Count: 10,
                 List: [
+                    "Bane",
                     "Bless",
-                    "Cure wounds"
+                    "Ceremony",
+                    "Command",
+                    "Create or Destroy Water",
+                    "Cure Wounds",
+                    "Detect Evil and Good",
+                    "Detect Magic",
+                    "Detect Poison and Disease",
+                    "Guiding Bolt",
+                    "Healing Word",
+                    "Inflict Wounds",
+                    "Protection from Evil and Good",
+                    "Purify Food and Drink",
+                    "Sanctuary",
+                    "Shield of Faith"
                 ]
             },
         },
@@ -239,11 +303,53 @@ const classes = [
         Spells : {
             Cantrips: {
                 Count: 2,
-                List: []
+                List: [
+                    "Control Flames",
+                    "Create Bonfire",
+                    "Druidcraft",
+                    "Frostbite",
+                    "Guidance",
+                    "Gust",
+                    "Infestation",
+                    "Magic Stone",
+                    "Mending",
+                    "Mold Earth",
+                    "Poison Spray",
+                    "Primal Savagery",
+                    "Produce Flame",
+                    "Resistance",
+                    "Shape Water",
+                    "Shillelagh",
+                    "Thorn Whip",
+                    "Thunderclap"
+                ]
             },
             Lvl1: {
                 Count: 10,
-                List: []
+                List: [
+                    "Absorb Elements",
+                    "Animal Friendship",
+                    "Beast Bond",
+                    "Charm Person",
+                    "Create or Destroy Water",
+                    "Cure Wounds",
+                    "Detect Magic",
+                    "Detect Poison and Disease",
+                    "Earth Tremor",
+                    "Entangle",
+                    "Faerie Fire",
+                    "Fog Cloud",
+                    "Goodberry",
+                    "Healing Word",
+                    "Ice Knife",
+                    "Jump",
+                    "Longstrider",
+                    "Protection from Evil and Good",
+                    "Purify Food and Drink",
+                    "Snare",
+                    "Speak with Animals",
+                    "Thunderwave"
+                ]
             },
         },
         Abilities: [
@@ -620,11 +726,71 @@ const classes = [
         Spells : {
             Cantrips: {
                 Count: 2,
-                List: []
+                List: [
+                    "Acid Splash",
+                    "Blade Ward",
+                    "Booming Blade",
+                    "Chill Touch",
+                    "Control Flames",
+                    "Create Bonfire",
+                    "Dancing Lights",
+                    "Fire Bolt",
+                    "Friends",
+                    "Frostbite",
+                    "Green-Flame Blade",
+                    "Gust",
+                    "Infestation",
+                    "Light",
+                    "Lightning Lure",
+                    "Mage Hand",
+                    "Mending",
+                    "Message",
+                    "Mind Sliver",
+                    "Minor Illusion",
+                    "Mold Earth",
+                    "Poison Spray",
+                    "Prestidigitation",
+                    "Ray of Frost",
+                    "Shape Water",
+                    "Shocking Grasp",
+                    "Sword Burst",
+                    "Thunderclap",
+                    "True Strike"
+                ]
             },
             Lvl1: {
                 Count: 4,
-                List: []
+                List: [
+                    "Absorb Elements",
+                    "Burning Hands",
+                    "Catapult",
+                    "Chaos Bolt",
+                    "Charm Person",
+                    "Chromatic Orb",
+                    "Color Spray",
+                    "Comprehend Languages",
+                    "Detect Magic",
+                    "Disguise Self",
+                    "Distort Value",
+                    "Earth Tremor",
+                    "Expeditious Retreat",
+                    "False Life",
+                    "Feather Fall",
+                    "Fog Cloud",
+                    "Grease",
+                    "Ice Knife",
+                    "Jump",
+                    "Mage Armor",
+                    "Magic Missile",
+                    "Ray of Sickness",
+                    "Shield",
+                    "Silent Image",
+                    "Silvery Barbs",
+                    "Sleep",
+                    "Tasha's Caustic Brew",
+                    "Thunderwave",
+                    "Witch Bolt"
+                ]
             },
         },
         Abilities: [
@@ -680,11 +846,46 @@ const classes = [
         Spells : {
             Cantrips: {
                 Count: 2,
-                List: []
+                List: [
+                    "Blade Ward",
+                    "Booming Blade",
+                    "Chill Touch",
+                    "Create Bonfire",
+                    "Eldritch Blast",
+                    "Friends",
+                    "Frostbite",
+                    "Green-Flame Blade",
+                    "Infestation",
+                    "Lightning Lure",
+                    "Mage Hand",
+                    "Magic Stone",
+                    "Mind Sliver",
+                    "Minor Illusion",
+                    "Poison Spray",
+                    "Prestidigitation",
+                    "Sword Burst",
+                    "Thunderclap",
+                    "Toll the Dead",
+                    "True Strike"
+                ]
             },
             Lvl1: {
                 Count: 2,
-                List: []
+                List: [
+                    "Armor of Agathys",
+                    "Arms of Hadar",
+                    "Cause Fear",
+                    "Charm Person",
+                    "Comprehend Languages",
+                    "Distort Value",
+                    "Expeditious Retreat",
+                    "Hellish Rebuke",
+                    "Hex",
+                    "Illusory Script",
+                    "Protection from Evil and Good",
+                    "Unseen Servant",
+                    "Witch Bolt"
+                ]
             },
         },
         Abilities: [
@@ -746,11 +947,88 @@ const classes = [
         Spells : {
             Cantrips: {
                 Count: 3,
-                List: []
+                List: [
+                    "Acid Splash",
+                    "Blade Ward",
+                    "Booming Blade",
+                    "Chill Touch",
+                    "Control Flames",
+                    "Create Bonfire",
+                    "Dancing Lights",
+                    "Encode Thoughts",
+                    "Fire Bolt",
+                    "Friends",
+                    "Frostbite",
+                    "Green-Flame Blade",
+                    "Gust",
+                    "Infestation",
+                    "Light",
+                    "Lightning Lure",
+                    "Mage Hand",
+                    "Mending",
+                    "Message",
+                    "Mind Sliver",
+                    "Minor Illusion",
+                    "Mold Earth",
+                    "Poison Spray",
+                    "Prestidigitation",
+                    "Ray of Frost",
+                    "Sapping Sting",
+                    "Shape Water",
+                    "Shocking Grasp",
+                    "Sword Burst",
+                    "Thunderclap",
+                    "Toll the Dead",
+                    "True Strike"
+                ]
             },
             Lvl1: {
                 Count: 6,
-                List: []
+                List: [
+                    "Absorb Elements",
+                    "Alarm",
+                    "Burning Hands",
+                    "Catapult",
+                    "Cause Fear",
+                    "Charm Person",
+                    "Chromatic Orb",
+                    "Color Spray",
+                    "Comprehend Languages",
+                    "Detect Magic",
+                    "Disguise Self",
+                    "Distort Value",
+                    "Earth Tremor",
+                    "Expeditious Retreat",
+                    "False Life",
+                    "Feather Fall",
+                    "Find Familiar",
+                    "Fog Cloud",
+                    "Frost Fingers",
+                    "Gift of Alacrity",
+                    "Grease",
+                    "Ice Knife",
+                    "Identify",
+                    "Illusory Script",
+                    "Jim's Magic Missile",
+                    "Jump",
+                    "Longstrider",
+                    "Mage Armor",
+                    "Magic Missile",
+                    "Magnify Gravity",
+                    "Protection from Evil and Good",
+                    "Ray of Sickness",
+                    "Shield",
+                    "Silent Image",
+                    "Silvery Barbs",
+                    "Sleep",
+                    "Snare",
+                    "Tasha's Caustic Brew",
+                    "Tasha's Hideous Laughter",
+                    "Tenser's Floating Disk",
+                    "Thunderwave",
+                    "Unseen Servant",
+                    "Witch Bolt"
+                ]
             },
         },
         Abilities: [
