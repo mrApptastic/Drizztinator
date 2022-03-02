@@ -1,7 +1,11 @@
 <template>
   <div>
-    <div>
-      <table>
+    <div class="mt-2 mb-2 d-flex justify-content-around">
+      <button class="btn btn-success" v-on:click="generateNew()">Generate Character</button>
+      <button class="btn btn-warning" v-on:click="clearList()">Clear List</button>
+    </div>
+    <div class="table-container">
+      <table class="table table-striped">
         <thead>
           <tr>
             <th>Name</th>
@@ -31,16 +35,37 @@ export default {
       characters : []
     };
   },
-  mounted: function () {
-    for (let i = 0; i <= 5; i++) {
+    methods: {
+    generateNew: function (number) {
+      if (!number) {
+        number = 1;
+      }
+
+      for (let i = 0; i < number; i++) {
+        setTimeout(() => {
+          this.characters.unshift(charGen.generateCharacter());
+        }, 10);
+      }
+    },
+    clearList: function () {
       setTimeout(() => {
-        this.characters.unshift(charGen.generateCharacter());
-      }, 10)
+        while (this.characters.length > 0) {
+          this.characters.pop();
+        }
+      }, 0);
     }
+  },
+  mounted: function () {
+      this.generateNew();
   },
   
 };
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+</style>

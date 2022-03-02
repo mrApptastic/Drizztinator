@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="container">
-    <MainHeader heading="Every Body Say Drizzzzzzt!" />
+    <MainHeader heading="Everybody say Drizzzzzzt!" />
     <MainView  />
   </div>
 </template>

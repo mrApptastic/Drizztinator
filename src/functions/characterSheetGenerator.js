@@ -85,7 +85,7 @@ export async function downloadCharacter(character) {
   const traits = character.Race.Abilities.concat(character.Class.Abilities).concat(character.Background.Abilities);
   let traitsText = "";
   for (let i = 0; i < traits.length; i++) {
-    traitsText += traits[i].Name + ": " + traits[i].Description
+    traitsText += traits[i].Name + ": " + traits[i].Description; // formatTraitsText(traits[i].Description, character.Race.Gender !== "Male")
     if (i !== traits.length -1) {
       traitsText += '\n\n';
     }
@@ -514,18 +514,12 @@ export async function downloadCharacter(character) {
     if (firstLevel.length >= 12) {
       form.getTextField('Spells 1033').setText(firstLevel[11]);      
     }
-  }
-
-
-
-  
-  
+  } 
   /* Finishing PDF */
   const pdfBytes = await pdfDoc.save();
   var blob = new Blob([pdfBytes], { type: "application/pdf" });
   var urlCreator = window.URL || window.webkitURL;
   var imageUrl = urlCreator.createObjectURL(blob);
-
   return imageUrl;
 }
 
@@ -544,10 +538,63 @@ function getIdeals(character) {
     return chosenOne;
 }
 
-function formatBonus(value) {
-  if (value > 0) {
+function formatBonus(value, zeroEmpty) {
+  if (zeroEmpty && value === 0) {
+    return "";
+  } else if (value > 0) {
     return "+" + value.toString();
   } else {
     return value.toString();
   }
+}
+
+function formatTraitsText(textSection, isFemale) {
+  const texts = textSection.toString().split(".");
+  const changedTexts = new Array();
+  for (let j = 0; j < texts.length; j++) {
+    let text = " " + texts[j].toString().toLowerCase() + " ";    
+    const be = isFemale ? " she is " : " he is ";
+    text = text.replaceAll(" i'm ", be);
+    text = text.replaceAll(" you are ", be);
+    const have = isFemale ? " she has " : " he has ";
+    text = text.replaceAll(" i have ", have);
+    text = text.replaceAll(" you have ", have);
+    const will = isFemale ? " she will " : " he will ";
+    text = text.replaceAll(" i'll ", will);
+    text = text.replaceAll(" i will ", will);
+    text = text.replaceAll(" you'll ", will);
+    text = text.replaceAll(" you will ", will);
+    const can = isFemale ? " she can " : " he can ";
+    text = text.replaceAll(" i can ", can);
+    text = text.replaceAll(" you can ", can);
+    const cant = isFemale ? " she cannot " : " he cannot ";
+    text = text.replaceAll(" i can't ", cant);
+    text = text.replaceAll(" you can't ", cant);
+    const use = isFemale ? " she uses " : "he uses ";
+    text = text.replaceAll(" i use ", use);
+    text = text.replaceAll(" you use ", use);
+    const come = isFemale ? " she comes " : "he comes ";
+    text = text.replaceAll(" i come ", come);
+    text = text.replaceAll(" you come ", come);
+    const fit = isFemale ? " she fits " : "he fits ";
+    text = text.replaceAll(" i fit ", fit);
+    text = text.replaceAll(" you fit ", fit);
+    const myself = isFemale ? " herself " : " himself ";
+    text = text.replaceAll(" myself ", myself);
+    text = text.replaceAll(" yourself ", myself);
+    const my = isFemale ? " her " : " his ";
+    text = text.replaceAll(" my ", my);
+    text = text.replaceAll(" your ", my);
+    const i = isFemale ? " she " : " she ";
+    text = text.replaceAll(" i ", i);
+    text = text.replaceAll(" you ", i);
+    const forme = isFemale ? " for her " : " for him ";
+    text = text.replaceAll(" for me ", i);
+    text = text.replaceAll(" for you ", i);
+    text = text.replaceAll(" dm ", " DM ");
+    text = text.trim().substring(0, 1).toUpperCase() + text.substring(1).toLowerCase();
+    changedTexts.push(text);
+  }
+  const finalText = changedTexts.join(". ");
+  return finalText.trim();
 }

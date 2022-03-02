@@ -917,9 +917,9 @@ const classes = [
             Strength: false,
             Dexterity: false,
             Constitution: false,
-            Intelligence: false,
+            Intelligence: true,
             Wisdom: true,
-            Charisma: true
+            Charisma: false
         },
         Proficiencies: [
             "Light Armor",

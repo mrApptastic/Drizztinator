@@ -1,5 +1,5 @@
 <template>
-  <tr>
+  <tr :class="{ 'table-danger': !link }">
     <td>
       {{character.Name}}
     </td>
@@ -7,7 +7,7 @@
       {{character.Race.Name}} {{character.Class.Name}}
     </td>
     <td>
-      <a v-if="link" v-bind:href="link" target="_blank">Download</a>
+      <a v-if="link" class="btn btn-danger" v-bind:href="link" target="_blank">Download</a>
     </td>
   </tr>
 </template>
