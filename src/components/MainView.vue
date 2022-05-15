@@ -1,8 +1,12 @@
 <template>
   <div>
     <div class="mt-2 mb-2 d-flex justify-content-around">
-      <button class="btn btn-success" v-on:click="generateNew()">Generate Character</button>
-      <button class="btn btn-warning" v-on:click="clearList()">Clear List</button>
+      <button class="btn btn-success" v-on:click="generateNew()">
+        Generate Character
+      </button>
+      <button class="btn btn-warning" v-on:click="clearList()">
+        Clear List
+      </button>
     </div>
     <div class="table-container">
       <table class="table table-striped">
@@ -14,7 +18,11 @@
           </tr>
         </thead>
         <tbody>
-          <Character v-for="char in characters" :key="char.Id" :character="char" />
+          <Character
+            v-for="char in characters"
+            :key="char.Id"
+            :character="char"
+          />
         </tbody>
       </table>
     </div>
@@ -28,14 +36,14 @@ import * as charGen from '../functions/characterGenerator.js';
 export default {
   name: 'MainView',
   components: {
-    Character    
+    Character,
   },
   data: function () {
     return {
-      characters : []
+      characters: [],
     };
   },
-    methods: {
+  methods: {
     generateNew: function (number) {
       if (!number) {
         number = 1;
@@ -53,14 +61,12 @@ export default {
           this.characters.pop();
         }
       }, 0);
-    }
+    },
   },
   mounted: function () {
-      this.generateNew();
+    this.generateNew();
   },
-  
 };
-
 </script>
 
 <style scoped>

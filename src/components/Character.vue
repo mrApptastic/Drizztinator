@@ -1,13 +1,13 @@
 <template>
   <tr :class="{ 'table-danger': !link }">
     <td>
-      {{character.Name}}
+      {{ character.Name }}
     </td>
+    <td>{{ character.Race.Name }} {{ character.Class.Name }}</td>
     <td>
-      {{character.Race.Name}} {{character.Class.Name}}
-    </td>
-    <td>
-      <a v-if="link" class="btn btn-danger" v-bind:href="link" target="_blank">Download</a>
+      <a v-if="link" class="btn btn-danger" v-bind:href="link" target="_blank"
+        >Download</a
+      >
     </td>
   </tr>
 </template>
@@ -18,26 +18,25 @@ import * as characterSheet from '../functions/characterSheetGenerator.js';
 export default {
   name: 'Character',
   props: {
-    character: Object
+    character: Object,
   },
-    data: function () {
+  data: function () {
     return {
-      link: null
+      link: null,
     };
   },
   mounted: function () {
-
     const ib = JSON.parse(JSON.stringify(this.character));
-    characterSheet.downloadCharacter(ib).then(x => {
-      this.link = x;
-    }, e => {
-      console.log(e);
-    });      
-  }
+    characterSheet.downloadCharacter(ib).then(
+      (x) => {
+        this.link = x;
+      },
+      (e) => {
+        console.log(e);
+      }
+    );
+  },
 };
-
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
